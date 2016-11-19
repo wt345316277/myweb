@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>各种搜索页面</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- //for-mobile-apps -->
+<script type="text/javascript" src="js/jquery.1.11.3.min.js"></script>
+<style>
+.s-skin-container {
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    min-width: 1000px;
+    z-index: -10;
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    zoom: 1;
+	background-color:rgb(64, 64, 64);
+	background-image:url(images/background.jpg);
+}
+</style>
+<script type="text/javascript">
+var am_time=20;
+$(function(){
+	am();
+});
+
+function am(){
+	$('.s-skin-container').animate({
+		'background-position':'100%'
+	},1000*am_time,function(){
+		$('.s-skin-container').animate({
+			'background-position':'0%'
+		},1000*am_time,am);
+	});
+}	
+
+</script>
+</head>
+<body>
+	<div class="s-skin-container s-isindex-wrap" style="">  </div>
+</body>
+</html>

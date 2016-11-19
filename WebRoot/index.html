@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>各种搜索页面</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- //for-mobile-apps -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/Righteous.css" rel="stylesheet" type="text/css">
+<link href="css/OpenSans.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.1.11.3.min.js"></script>
+<style>
+.s-skin-container {
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    min-width: 1000px;
+    z-index: -10;
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    zoom: 1;
+	background-color:rgb(64, 64, 64);
+	background-image:url(images/background.jpg);
+}
+</style>
+</head>
+<body>
+	<div class="s-skin-container s-isindex-wrap" style="">  </div>
+	<div class="main">
+		<h1>综合搜索</h1>
+		<div class="search">
+			<span>PIXIV 图片搜索</span>
+			<form action="http://www.pixiv.net/member_illust.php" method="get" target="_blank">
+				<input type="text" placeholder="图片ID" name="illust_id" onclick="select();">
+				<input type="hidden" name="mode" value="medium">
+				<input type="submit" value="Search">
+				<div class="clear"></div>
+			</form>
+		</div>
+		<div class="search-two">
+			<span>PIXIV 画师搜索</span>
+			<form action="http://www.pixiv.net/member_illust.php" method="get" target="_blank">
+				<input type="text" placeholder="画师ID" name="id" onclick="select();">
+				<input type="submit" value="Search">
+				<div class="clear"></div>
+			</form>
+		</div>
+		<div class="search-three">
+			<form>
+				<input type="text" value="Ex. web design, frontend"
+					onfocus="this.value = '';"
+					onblur="if (this.value == '') {this.value = 'Ex. web design, frontend';}"
+					required=""> <input type="submit" value="Search">
+				<div class="clear"></div>
+			</form>
+		</div>
+		<div class="search-four">
+			<form>
+				<input type="text" value="Ex. web design, frontend"
+					onfocus="this.value = '';"
+					onblur="if (this.value == '') {this.value = 'Ex. web design, frontend';}"
+					required=""> <input type="submit" value="Search">
+				<div class="clear"></div>
+			</form>
+		</div>
+
+		<div class="search-five">
+			<form>
+				<input type="text" value="Ex. web design, frontend"
+					onfocus="this.value = '';"
+					onblur="if (this.value == '') {this.value = 'Ex. web design, frontend';}"
+					required=""> <input type="submit" value="Search">
+				<div class="clear"></div>
+			</form>
+		</div>
+
+	</div>
+	
+</body>
+<script type="text/javascript">
+var am_time=30;
+$(function(){
+	am();
+});
+
+function am(){
+	$('.s-skin-container').animate({
+		'background-position':'100%'
+	},1000*am_time,function(){
+		$('.s-skin-container').animate({
+			'background-position':'0%'
+		},1000*am_time,am);
+	});
+}	
+
+</script>
+</html>
